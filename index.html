@@ -1,17 +1,18 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cadastro de Médico e Paciente</title>
+    <title>Cadastro de Médicos e Pacientes</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <div class="forms-wrapper">
-        <div class="form-container">
+    <div class="container">
+        <!-- Formulários de Cadastro -->
+        <div class="form-wrapper">
             <h2>Cadastro de Médico</h2>
-            <form id="medico-form">
+            <form id="medico-form" class="form">
                 <div class="input-group">
                     <label for="medico-nome">Nome</label>
                     <input type="text" id="medico-nome" name="nome" required>
@@ -28,13 +29,13 @@
                     <label for="medico-telefone">Telefone</label>
                     <input type="text" id="medico-telefone" name="telefone" required>
                 </div>
-                <button type="submit">Cadastrar Médico</button>
+                <button type="submit" class="btn">Cadastrar Médico</button>
             </form>
         </div>
 
-        <div class="form-container">
+        <div class="form-wrapper">
             <h2>Cadastro de Paciente</h2>
-            <form id="paciente-form">
+            <form id="paciente-form" class="form">
                 <div class="input-group">
                     <label for="paciente-nome">Nome</label>
                     <input type="text" id="paciente-nome" name="nome" required>
@@ -55,8 +56,44 @@
                     <label for="paciente-id-medico">Médico (ID)</label>
                     <input type="number" id="paciente-id-medico" name="id_medico" required>
                 </div>
-                <button type="submit">Cadastrar Paciente</button>
+                <button type="submit" class="btn">Cadastrar Paciente</button>
             </form>
+        </div>
+
+        <!-- Tabelas de Médicos e Pacientes -->
+        <div class="table-wrapper">
+            <div class="table-container">
+                <h2>Médicos Cadastrados</h2>
+                <table id="medicos-table" class="table">
+                    <thead>
+                        <tr>
+                            <th>Id</th>
+                            <th>Nome</th>
+                            <th>Email</th>
+                            <th>CRM</th>
+                            <th>Telefone</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+
+            <div class="table-container">
+                <h2>Pacientes Cadastrados</h2>
+                <table id="pacientes-table" class="table">
+                    <thead>
+                        <tr>
+                            <th>Id</th>
+                            <th>Nome</th>
+                            <th>Email</th>
+                            <th>Data Nascimento</th>
+                            <th>Telefone</th>
+                            <th>Médico (ID)</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </div>
         </div>
     </div>
 
