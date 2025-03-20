@@ -7,12 +7,12 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
     <div class="container">
         <!-- Formulários de Cadastro -->
         <div class="form-wrapper">
             <h2>Cadastro de Médico</h2>
             <form id="medico-form" class="form">
+                <input type="hidden" id="medico-id" name="id"> <!-- Campo oculto para o ID do médico -->
                 <div class="input-group">
                     <label for="medico-nome">Nome</label>
                     <input type="text" id="medico-nome" name="nome" required>
@@ -36,6 +36,7 @@
         <div class="form-wrapper">
             <h2>Cadastro de Paciente</h2>
             <form id="paciente-form" class="form">
+                <input type="hidden" id="paciente-id" name="id"> <!-- Campo oculto para o ID do paciente -->
                 <div class="input-group">
                     <label for="paciente-nome">Nome</label>
                     <input type="text" id="paciente-nome" name="nome" required>
@@ -72,6 +73,7 @@
                             <th>Email</th>
                             <th>CRM</th>
                             <th>Telefone</th>
+                            <th>Ações</th>
                         </tr>
                     </thead>
                     <tbody></tbody>
@@ -89,6 +91,7 @@
                             <th>Data Nascimento</th>
                             <th>Telefone</th>
                             <th>Médico (ID)</th>
+                            <th>Ações</th>
                         </tr>
                     </thead>
                     <tbody></tbody>
